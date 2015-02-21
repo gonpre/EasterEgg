@@ -8,8 +8,11 @@ Jquery plugin to create easter eggs in your apps in a very simple way by Francis
 
 ## Observation
 
-This allow to set a word to type that will triger the custom function
-
+This allow to set a word to type that will trigger the custom function.
+For this to work you need to include the Jquery library
+```html
+<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+```
 ## Author
 
 [Francisco Gonzalez](https://github.com/gonpre)
