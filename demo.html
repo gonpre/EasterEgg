@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Demo page</title>
+    </head>
+    <body>
+        <h1>Demo Page</h1>
+        <p>This is the demo page.</p>
+        <h2>How to use:</h2>
+<pre>
+    var easter = $(window).easteregg();
+    easter.addEgg('word', callback);
+    easter.init();
+</pre>
+        <h2>Eg. Code</h2>
+<pre>
+    var easter = $(window).easteregg();
+    ghost_counter = 0;
+    easter.addEgg('demo', function(){
+        $('body').append('&lt;img id="ghost-pixel-' + ghost_counter + '" src="./img/ghost.png" /&gt;');
+        var $ghost = $('#ghost-pixel-' + ghost_counter);
+        $ghost.css('position', 'absolute');
+        $ghost.css('top', getRandomInt(0, window.innerHeight));
+        $ghost.css('left', getRandomInt(0, window.innerWidth));
+        $ghost.css('z-index', 9999 + ghost_counter);
+        ghost_counter++;
+    });
+    easter.init();
+</pre>
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="./js/jquery.easteregg.min.js"></script>
+    <script>
+        var easter = $(window).easteregg();
+        ghost_counter = 0;
+        easter.addEgg('demo', function(){
+            $('body').append('<img id="ghost-pixel-' + ghost_counter + '" src="./img/ghost.png" />');
+            var $ghost = $('#ghost-pixel-' + ghost_counter);
+            $ghost.css('position', 'absolute');
+            $ghost.css('top', getRandomInt(0, window.innerHeight));
+            $ghost.css('left', getRandomInt(0, window.innerWidth));
+            $ghost.css('z-index', 9999 + ghost_counter);
+            ghost_counter++;
+        });
+        easter.init();
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    </script>
+    </body>
+</html>
