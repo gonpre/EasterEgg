@@ -16,6 +16,7 @@ For this to work you need to include the Jquery library
 ## Author
 
 [Francisco Gonzalez](https://github.com/gonpre)
+[Jorge Rodriguez](https://github.com/grandulgoliat)
 
 ## Usage
 
