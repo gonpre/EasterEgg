@@ -27,7 +27,7 @@
     easter.init();
 </pre>
     <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="./js/jquery.easteregg.min.js"></script>
+    <script src="./js/jquery.easteregg.js"></script>
     <script>
         var easter = $(window).easteregg();
         ghost_counter = 0;
@@ -39,6 +39,9 @@
             $ghost.css('left', getRandomInt(0, window.innerWidth));
             $ghost.css('z-index', 9999 + ghost_counter);
             ghost_counter++;
+        });
+        easter.setKonami(function(){
+            alert('konami');
         });
         easter.init();
         function getRandomInt(min, max) {
