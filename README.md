@@ -39,7 +39,7 @@ You can add as many as you want, using a string or a array of charcodes:
     });
     easter.init();
 ```
-By default we added the KONAMI (up, up, down, down, b, a, b, a) code and it's very easy to use:
+By default we added the KONAMI (up, up, down, down, left, right, left, right, b, a, b, a) code and it's very easy to use:
 ```js
     var easter = $(window).eastereggs();
     easter.setKonami(function(){
