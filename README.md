@@ -13,9 +13,9 @@ For this to work you need to include the Jquery library
 ```html
 <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 ```
-## Author
+## Authors
 
-[Francisco Gonzalez](https://github.com/gonpre)
+[Francisco Gonzalez](https://github.com/gonpre),
 [Jorge Rodriguez](https://github.com/grandulgoliat)
 
 ## Usage
@@ -28,14 +28,22 @@ In your javascript, just add the lines:
     });
     easter.init();
 ```
-You can add as many as you want:
+You can add as many as you want, using a string or a array of charcodes:
 ```js
     var easter = $(window).eastereggs();
     easter.addEgg('magicword', function(){
         // Do something
     });
-    easter.addEgg('otherword', function(){
+    easter.addEgg([68,69,77,79], function(){
         // Do something 2
+    });
+    easter.init();
+```
+By default we added the KONAMI (up, up, down, down, b, a, b, a) code and it's very easy to use:
+```js
+    var easter = $(window).eastereggs();
+    easter.setKonami(function(){
+        // Do something
     });
     easter.init();
 ```
