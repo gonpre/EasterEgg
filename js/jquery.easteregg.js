@@ -13,13 +13,16 @@
     };
 
     $.fn.easteregg.default_settings = {
+
         delay_time : 1000,
+
         eggsters   : [
             {
                 keys : [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 66, 65],
                 callback : null
             }
         ]
+
     };
 
     function is_same_array(array1, array2) {
@@ -37,6 +40,7 @@
     EasterEgg.VERSION = '1.0.0';
 
     EasterEgg.prototype = {
+
         init : function() {
             var _self = this;
 
@@ -58,9 +62,11 @@
 
             _self._timer = _self.getTimer();
         },
+
         setKonami : function(callback) {
             this._settings.eggsters[0].callback = callback;
         },
+
         addEgg : function(keys, callback) {
             if (!($.type(keys) === 'array' || $.type(keys) === 'string') || keys.lenght == 0 || $.type(callback) !== 'function') {
                 return false;
@@ -76,9 +82,11 @@
 
             this._settings.eggsters.push({keys:keys, callback:callback});
         },
+
         clearKeys : function() {
             this._pressed_keys = [];
         },
+
         getTimer : function() {
             var _self = this;
 
@@ -86,5 +94,7 @@
                 _self.clearKeys();
             }, _self._settings.delay_time);
         },
+
     };
+
 })(jQuery);
